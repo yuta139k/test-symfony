@@ -13,9 +13,9 @@ $ bin/console doctrine:schema:create
 
 ```
 # player
-INSERT INTO player (id, name,number) VALUES (1, "test","6");
-INSERT INTO player (id, name,number) VALUES (2, "ikeyan","66");
-INSERT INTO player (id, name,number) VALUES (3, "setayan","99");
+INSERT INTO player (id, name,number, team_id) VALUES (1, "test", "6", 1);
+INSERT INTO player (id, name,number, team_id) VALUES (2, "ikeyan", "66", 2);
+INSERT INTO player (id, name,number, team_id) VALUES (3, "setayan", "99", 1);
 
 # team
 INSERT INTO team (name) VALUES ("setars");
