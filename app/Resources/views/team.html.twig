@@ -1,0 +1,9 @@
+<h1>teams</h1>
+<table>
+    {% for team in teams %}
+        <tr>
+            <td>{{ team.id }}</td>
+            <td>{{ team.name }}</td>
+        </tr>
+    {% endfor %}
+</table>
