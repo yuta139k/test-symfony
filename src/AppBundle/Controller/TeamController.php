@@ -13,11 +13,9 @@ class TeamController extends Controller
      */
     public function numberAction()
     {
-        $players = [
-            ['id' => 1, 'name' => 'test', 'number' => '6'],
-            ['id' => 2, 'name' => 'ikeyan', 'number' => '66'],
-            ['id' => 3, 'name' => 'setayan', 'number' => '99'],
-        ];
+        $repository = $this->getDoctrine()->getEntityManager()->getRepository('AppBundle:Player');
+        $players = $repository->findAll();
+
         return $this->render('team.html.twig', array(
             'players' => $players,
         ));
