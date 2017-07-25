@@ -6,17 +6,17 @@ namespace AppBundle\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-class TeamController extends Controller
+class PlayerController extends Controller
 {
     /**
-     * @Route("/team")
+     * @Route("/players")
      */
     public function numberAction()
     {
         $repository = $this->getDoctrine()->getEntityManager()->getRepository('AppBundle:Player');
         $players = $repository->findAll();
 
-        return $this->render('team.html.twig', array(
+        return $this->render('player.html.twig', array(
             'players' => $players,
         ));
     }
