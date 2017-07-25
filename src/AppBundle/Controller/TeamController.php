@@ -15,7 +15,7 @@ class TeamController extends Controller
     {
         $number = mt_rand(0, 100);
 
-        return $this->render('lucky/number.html.twig', array(
+        return $this->render('team.html.twig', array(
             'number' => $number,
         ));
     }
