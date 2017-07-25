@@ -13,7 +13,7 @@ class PlayerController extends Controller
      */
     public function numberAction()
     {
-        $repository = $this->getDoctrine()->getEntityManager()->getRepository('AppBundle:Player');
+        $repository = $this->getDoctrine()->getRepository('AppBundle:Player');
         $players = $repository->findAll();
 
         return $this->render('player.html.twig', array(
