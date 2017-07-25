@@ -13,10 +13,13 @@ class TeamController extends Controller
      */
     public function numberAction()
     {
-        $number = mt_rand(0, 100);
-
+        $players = [
+            ['id' => 1, 'name' => 'test', 'number' => '6'],
+            ['id' => 2, 'name' => 'ikeyan', 'number' => '66'],
+            ['id' => 3, 'name' => 'setayan', 'number' => '99'],
+        ];
         return $this->render('team.html.twig', array(
-            'number' => $number,
+            'players' => $players,
         ));
     }
 }
