@@ -10,7 +10,7 @@ class PlayerControllerTest extends WebTestCase
     {
         $client = static::createClient();
 
-        $crawler = $client->request('GET', '/players');
+        $crawler = $client->request('GET', 'teams/1/players');
 
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
         $this->assertContains('player', $crawler->filter('h1')->text());

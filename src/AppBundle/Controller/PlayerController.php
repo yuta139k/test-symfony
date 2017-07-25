@@ -9,12 +9,12 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 class PlayerController extends Controller
 {
     /**
-     * @Route("/players")
+     * @Route("teams/{teamId}/players")
      */
-    public function numberAction()
+    public function numberAction($teamId)
     {
         $repository = $this->getDoctrine()->getRepository('AppBundle:Player');
-        $players = $repository->findAll();
+        $players = $repository->findBy(['teamId' => $teamId]);
 
         return $this->render('player.html.twig', array(
             'players' => $players,
