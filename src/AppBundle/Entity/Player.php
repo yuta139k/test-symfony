@@ -35,6 +35,13 @@ class Player
      */
     private $number;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="team_id", type="integer", length=255)
+     */
+    private $teamId;
+
 
     /**
      * Get id
@@ -92,6 +99,30 @@ class Player
     public function getNumber()
     {
         return $this->number;
+    }
+
+    /**
+     * Set teamId
+     *
+     * @param integer $teamId
+     *
+     * @return Player
+     */
+    public function setTeamId($teamId)
+    {
+        $this->teamId = $teamId;
+
+        return $this;
+    }
+
+    /**
+     * Get teamId
+     *
+     * @return integer
+     */
+    public function getTeamId()
+    {
+        return $this->teamId;
     }
 }
 
