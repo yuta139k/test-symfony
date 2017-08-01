@@ -33,3 +33,9 @@ services:
     # AppBundle\Service\ExampleService:
     #     arguments:
     #         $someArgument: 'some_value'
+
+    app.player_list:
+      public: true
+      class: AppBundle\Service\PlayerListService
+      arguments:
+        - '@doctrine.orm.entity_manager'
