@@ -31,6 +31,13 @@ class Player
     /**
      * @var string
      *
+     * @ORM\Column(name="player_name", type="string", length=255)
+     */
+    private $playerName;
+
+    /**
+     * @var string
+     *
      * @ORM\Column(name="number", type="string", length=255)
      */
     private $number;
@@ -75,6 +82,30 @@ class Player
     public function getName()
     {
         return $this->name;
+    }
+
+    /**
+     * Set playerName
+     *
+     * @param string $playerName
+     *
+     * @return Player
+     */
+    public function setPlayerName($playerName)
+    {
+        $this->playerName = $playerName;
+
+        return $this;
+    }
+
+    /**
+     * Get playerName
+     *
+     * @return string
+     */
+    public function getPlayerName()
+    {
+        return $this->playerName;
     }
 
     /**
@@ -125,4 +156,3 @@ class Player
         return $this->teamId;
     }
 }
-
