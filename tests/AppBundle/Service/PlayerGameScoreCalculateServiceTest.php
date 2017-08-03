@@ -14,6 +14,6 @@ class PlayerGameScoreCalculateServiceTest extends TestCase
         $score->setAtBats(10);
         $score->setHits(2);
 
-        $this->assertEquals('0.200', $service->calcBattingAverage($score));
+        $this->assertSame(0.200, $service->calcBattingAverage($score));
     }
 }
