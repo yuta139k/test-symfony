@@ -10,6 +10,6 @@ class PlayerGameScoreCalculateService
         $atBats = $playerGameScore->getAtBats();
         $hits = $playerGameScore->getHits();
 
-        return $hits / $atBats;
+        return round($hits / $atBats, 3);
     }
 }
