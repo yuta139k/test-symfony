@@ -5,12 +5,12 @@ namespace AppBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * PlayerScore
+ * PlayerGameScore
  *
- * @ORM\Table(name="player_score")
- * @ORM\Entity(repositoryClass="AppBundle\Repository\PlayerScoreRepository")
+ * @ORM\Table(name="player_game_score")
+ * @ORM\Entity(repositoryClass="AppBundle\Repository\PlayerGameScoreRepository")
  */
-class PlayerScore
+class PlayerGameScore
 {
     /**
      * @var int
@@ -163,7 +163,7 @@ class PlayerScore
      *
      * @param integer $playerId
      *
-     * @return PlayerScore
+     * @return PlayerGameScore
      */
     public function setPlayerId($playerId)
     {
@@ -187,7 +187,7 @@ class PlayerScore
      *
      * @param integer $gameScoreId
      *
-     * @return PlayerScore
+     * @return PlayerGameScore
      */
     public function setGameScoreId($gameScoreId)
     {
@@ -211,7 +211,7 @@ class PlayerScore
      *
      * @param integer $totalPlateApprearances
      *
-     * @return PlayerScore
+     * @return PlayerGameScore
      */
     public function setTotalPlateApprearances($totalPlateApprearances)
     {
@@ -235,7 +235,7 @@ class PlayerScore
      *
      * @param integer $atBats
      *
-     * @return PlayerScore
+     * @return PlayerGameScore
      */
     public function setAtBats($atBats)
     {
@@ -259,7 +259,7 @@ class PlayerScore
      *
      * @param integer $runs
      *
-     * @return PlayerScore
+     * @return PlayerGameScore
      */
     public function setRuns($runs)
     {
@@ -283,7 +283,7 @@ class PlayerScore
      *
      * @param integer $hits
      *
-     * @return PlayerScore
+     * @return PlayerGameScore
      */
     public function setHits($hits)
     {
@@ -307,7 +307,7 @@ class PlayerScore
      *
      * @param integer $doubles
      *
-     * @return PlayerScore
+     * @return PlayerGameScore
      */
     public function setDoubles($doubles)
     {
@@ -331,7 +331,7 @@ class PlayerScore
      *
      * @param integer $triples
      *
-     * @return PlayerScore
+     * @return PlayerGameScore
      */
     public function setTriples($triples)
     {
@@ -355,7 +355,7 @@ class PlayerScore
      *
      * @param integer $homeruns
      *
-     * @return PlayerScore
+     * @return PlayerGameScore
      */
     public function setHomeruns($homeruns)
     {
@@ -379,7 +379,7 @@ class PlayerScore
      *
      * @param integer $runsBattedIn
      *
-     * @return PlayerScore
+     * @return PlayerGameScore
      */
     public function setRunsBattedIn($runsBattedIn)
     {
@@ -403,7 +403,7 @@ class PlayerScore
      *
      * @param integer $stolenBases
      *
-     * @return PlayerScore
+     * @return PlayerGameScore
      */
     public function setStolenBases($stolenBases)
     {
@@ -427,7 +427,7 @@ class PlayerScore
      *
      * @param integer $caughtStealing
      *
-     * @return PlayerScore
+     * @return PlayerGameScore
      */
     public function setCaughtStealing($caughtStealing)
     {
@@ -451,7 +451,7 @@ class PlayerScore
      *
      * @param integer $walks
      *
-     * @return PlayerScore
+     * @return PlayerGameScore
      */
     public function setWalks($walks)
     {
@@ -475,7 +475,7 @@ class PlayerScore
      *
      * @param integer $strikeouts
      *
-     * @return PlayerScore
+     * @return PlayerGameScore
      */
     public function setStrikeouts($strikeouts)
     {
@@ -499,7 +499,7 @@ class PlayerScore
      *
      * @param float $battingAverage
      *
-     * @return PlayerScore
+     * @return PlayerGameScore
      */
     public function setBattingAverage($battingAverage)
     {
@@ -523,7 +523,7 @@ class PlayerScore
      *
      * @param float $onBasePercentage
      *
-     * @return PlayerScore
+     * @return PlayerGameScore
      */
     public function setOnBasePercentage($onBasePercentage)
     {
@@ -547,7 +547,7 @@ class PlayerScore
      *
      * @param float $sluggingPercentage
      *
-     * @return PlayerScore
+     * @return PlayerGameScore
      */
     public function setSluggingPercentage($sluggingPercentage)
     {
@@ -571,7 +571,7 @@ class PlayerScore
      *
      * @param float $ops
      *
-     * @return PlayerScore
+     * @return PlayerGameScore
      */
     public function setOps($ops)
     {
@@ -590,4 +590,3 @@ class PlayerScore
         return $this->ops;
     }
 }
-
