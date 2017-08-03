@@ -38,9 +38,9 @@ class PlayerGameScore
     /**
      * @var int
      *
-     * @ORM\Column(name="total_plate_apprearances", type="integer")
+     * @ORM\Column(name="total_plate_appearances", type="integer")
      */
-    private $totalPlateApprearances;
+    private $totalPlateAppearances;
 
     /**
      * @var int
@@ -207,27 +207,27 @@ class PlayerGameScore
     }
 
     /**
-     * Set totalPlateApprearances
+     * Set totalPlateAppearances
      *
-     * @param integer $totalPlateApprearances
+     * @param integer $totalPlateAppearances
      *
      * @return PlayerGameScore
      */
-    public function setTotalPlateApprearances($totalPlateApprearances)
+    public function setTotalPlateAppearances($totalPlateAppearances)
     {
-        $this->totalPlateApprearances = $totalPlateApprearances;
+        $this->totalPlateAppearances = $totalPlateAppearances;
 
         return $this;
     }
 
     /**
-     * Get totalPlateApprearances
+     * Get totalPlateAppearances
      *
      * @return int
      */
-    public function getTotalPlateApprearances()
+    public function getTotalPlateAppearances()
     {
-        return $this->totalPlateApprearances;
+        return $this->totalPlateAppearances;
     }
 
     /**
