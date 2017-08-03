@@ -1,10 +1,15 @@
 <?php
 namespace AppBundle\Service;
 
+use AppBundle\Entity\PlayerGameScore;
+
 class PlayerGameScoreCalculateService
 {
-    public function CalcBattingAverage()
+    public function CalcBattingAverage(PlayerGameScore $playerGameScore)
     {
-        return '0.200';
+        $atBats = $playerGameScore->getAtBats();
+        $hits = $playerGameScore->getHits();
+
+        return $hits / $atBats;
     }
 }
