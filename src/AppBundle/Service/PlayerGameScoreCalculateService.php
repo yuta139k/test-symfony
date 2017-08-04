@@ -9,10 +9,12 @@ class PlayerGameScoreCalculateService
     {
         $atBats = $playerGameScore->getAtBats();
         $hits = $playerGameScore->getHits();
-        if ($hits / $atBats > 1) {
+        $battingAverage = $hits / $atBats;
+
+        if ($battingAverage > 1) {
             throw new \InvalidArgumentException();
         }
 
-        return round($hits / $atBats, 3);
+        return round($battingAverage, 3);
     }
 }
