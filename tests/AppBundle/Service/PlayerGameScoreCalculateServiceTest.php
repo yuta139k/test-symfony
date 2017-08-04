@@ -39,6 +39,7 @@ class PlayerGameScoreCalculateServiceTest extends TestCase
         return [
             [3, 1, 0.333],
             [10, 2, 0.200],
+            [1, 1, 1.00],
         ];
     }
 
@@ -46,6 +47,7 @@ class PlayerGameScoreCalculateServiceTest extends TestCase
     {
         return [
             [3, 10],
+            [1000, 1001],
         ];
     }
 }
