@@ -7,23 +7,24 @@ use PHPUnit\Framework\TestCase;
 
 class PlayerGameScoreCalculateServiceTest extends TestCase
 {
-    public function test打率が計算できる()
+    /**
+     * @dataProvider batsAndHits
+     */
+    public function test小数点第三位以下の打率は四捨五入($bats, $hits, $expected)
     {
         $service = new PlayerGameScoreCalculateService();
         $score = new PlayerGameScore();
-        $score->setAtBats(10);
-        $score->setHits(2);
+        $score->setAtBats($bats);
+        $score->setHits($hits);
 
-        $this->assertSame(0.200, $service->calcBattingAverage($score));
+        $this->assertSame($expected, $service->calcBattingAverage($score));
     }
 
-    public function test小数点第三位以下の打率は四捨五入()
+    public function batsAndHits()
     {
-        $service = new PlayerGameScoreCalculateService();
-        $score = new PlayerGameScore();
-        $score->setAtBats(3);
-        $score->setHits(1);
-
-        $this->assertSame(0.333, $service->calcBattingAverage($score));
+        return [
+            [3, 1, 0.333],
+            [10, 2, 0.200],
+        ];
     }
 }
